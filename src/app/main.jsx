@@ -4,11 +4,12 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import Header from "./componets/Header";
-import Home from "./screens/Home";
-import SavePage from "./screens/save";
-import DownloadPage from "./screens/download";
-import FilesPage from "./screens/files";
+import Header from "./ui/componets/Header";
+import Home from "./ui/screens/Home";
+import SavePage from "./ui/screens/save";
+import DownloadPage from "./ui/screens/download";
+import FilesPage from "./ui/screens/files";
+import KeyScreen from "./ui/screens/key_screen";
 
 
 export default function Main() {
@@ -21,6 +22,7 @@ export default function Main() {
                     <Route path="/save" element={<SavePage/>} />
                     <Route path="/download" element={<DownloadPage/>} />
                     <Route path="/files/:key" element={<FilesPage/>} />
+                    <Route path="/key/:key" element={<KeyScreen/>} />
                 </Routes>
 
                 </div>

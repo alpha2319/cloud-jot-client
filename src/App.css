@@ -75,4 +75,52 @@ detailCard{
   border:2px black solid;
   border-radius: 0 12px 12px 0;
 }
+.scrollParent{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 
+.scrollChild{
+  width: 100%;
+  height: 99%;
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.error{
+  color:red;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.keyScreen{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+}
+
+.centerText{
+  text-align: center;
+}
+.keyText{
+  font-size: 22px;
+  color: green;
+  font-weight: bold;
+}
+.boldText{
+  font-weight: bold;
+}
+.keyTextField{
+  width: max(200px,60%);
+  padding: 10px;
+  border-radius: 22px;
+  border: 3px solid green;
+}
+.fullScreen{
+height: 400px;
+}

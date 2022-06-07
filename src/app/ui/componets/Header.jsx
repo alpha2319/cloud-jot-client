@@ -3,7 +3,7 @@ import React from "react";
 
 export default  function Header() {
     return (
-        <nav className="navbar navbar-expand-lg  bg-warning">
+        <nav className="navbar navbar-expand-md  bg-warning">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">Cloud Jot</Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">

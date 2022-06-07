@@ -1,5 +1,5 @@
-import  save from "../../assets/save.jpg";
-import  download from "../../assets/download.jpg";
+import  save from "../../../assets/save.jpg";
+import  download from "../../../assets/download.jpg";
 import {Link} from "react-router-dom";
 
 export default  function Home(){
