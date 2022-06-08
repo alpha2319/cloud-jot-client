@@ -4,3 +4,5 @@ export const  MAX_SIZE_LIMIT = 5000000;
 export const  MAX_FILES_LIMIT = 5;
 export const SITE_URL = "https://abc.com/"
 export  const  SECURITY_KEY_NOT_PROVIDED_ERROR = "please enter security key";
+export  const  FILES_NOT_SELECTED_ERROR = "please select at least one file";
+export const DUMMY_ERROR = "Something went wrong please check your internet connection";

@@ -124,3 +124,8 @@ detailCard{
 .fullScreen{
 height: 400px;
 }
+.file-card{
+  /*border-radius: 12px;*/
+  border-bottom: 1px solid;
+  margin: auto;
+}
