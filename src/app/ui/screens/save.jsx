@@ -8,7 +8,7 @@ import {
     FILES_NOT_SELECTED_ERROR,
     FILES_SIZE_LIMIT_ERROR,
     MAX_FILES_LIMIT,
-    MAX_SIZE_LIMIT, SITE_URL
+    MAX_SIZE_LIMIT, SERVER_URL
 } from "../../util/const";
 import FileListComponent from "../componets/selected_files";
 import {useNavigate} from "react-router-dom";
@@ -49,7 +49,7 @@ export default  function SavePage() {
 
 
    async function uploadFiles() {
-       if(selectedFiles ==null && selectedFiles.length === 0) return setError(FILES_NOT_SELECTED_ERROR);
+       if(selectedFiles ==null || selectedFiles.length === 0) return setError(FILES_NOT_SELECTED_ERROR);
        setLoading(true);
        const formData= new FormData();
        selectedFiles.forEach((file)=>{
@@ -57,7 +57,8 @@ export default  function SavePage() {
        });
        // TODO update url soon
        try{
-           let response =await axios.post(SITE_URL,formData);
+           const headers = {'Access-Control-Allow-Origin':"http://localhost:3001/records",'Access-Control-Allow-Credentials':true};
+           let response =await axios.post(SERVER_URL+"records/",formData,{headers});
            // console.log(response);
            if(response.status ===201){
                 const key = response.data["key"];
@@ -68,6 +69,7 @@ export default  function SavePage() {
            }
 
        }catch (e) {
+           console.log(e);
             setError(DUMMY_ERROR);
        }
 

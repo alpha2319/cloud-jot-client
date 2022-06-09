@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import QRCode from "react-qr-code";
-import {SITE_URL} from "../../util/const";
+import {SERVER_URL, SITE_URL} from "../../util/const";
 
 export  default  function KeyScreen() {
     const key = useParams().key;
