@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {SERVER_URL} from "../../util/const";
+import {DUMMY_ERROR, SERVER_URL} from "../../util/const";
 import  notFound from "../../../assets/not_found.jpg";
 import FileListComponent from "../componets/selected_files";
 
@@ -24,7 +24,7 @@ export default  function FilesPage() {
             }
         }catch (e) {
                 setFound(false);
-                setError("Files Not Found");
+                setError(DUMMY_ERROR);
         }
         setLoading(false);
     }
@@ -40,8 +40,12 @@ export default  function FilesPage() {
        for (let i = 0; i < files.length; i++) {
            setTimeout(()=>{
                link.setAttribute('href', files[i]["file"]);
+               link.setAttribute(
+                   'download',
+                   files[i]["name"],
+               );
                link.click();
-           },i*1000);
+           },i*2000);
        }
        document.body.removeChild(link);
     }
